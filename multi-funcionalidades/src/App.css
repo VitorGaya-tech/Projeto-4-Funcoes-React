@@ -1,0 +1,161 @@
+.App {
+  text-align: center;              /* Centraliza o texto e elementos internos */
+  display: flex;                   /* Ativa o Flexbox para o layout dentro da div */
+  flex-direction: column;          /* Organiza os elementos em coluna (um em cima do outro) */
+  align-items: center;             /* Centraliza os itens na horizontal */
+  justify-content: center;         /* Centraliza os itens na vertical */
+  background-color: white;         /* Cor de fundo da área do jogo */
+  border-radius: 10px;             /* Bordas arredondadas para a área do jogo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombras para dar profundidade */
+  padding: 20px;     
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 colunas de 100px */
+  grid-template-rows: repeat(3, 100px); /* 3 linhas de 100px */
+  gap: 5px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+div {
+  margin-top: 20px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.square:focus {
+  outline: none;
+}
+
+body {
+  display: flex;               /* Ativa o Flexbox para o layout */
+  justify-content: center;     /* Centraliza o conteúdo horizontalmente */
+  align-items: center;         /* Centraliza o conteúdo verticalmente */
+  height: 100vh;               /* Define a altura da tela para 100% da altura da janela */
+  margin: 0;                   /* Remove a margem padrão do body */
+  font-family: Arial, sans-serif;  /* Define a fonte do texto */
+  background-color: #f0f0f0;   /* Define a cor de fundo da página */
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #45a049;
+}
+
+.reset-button:focus {
+  outline: none;
+}
+
+header {
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+nav ul li:hover {
+  color: #4CAF50;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
